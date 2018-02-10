@@ -1,7 +1,15 @@
 <mat-expansion-panel>
   <mat-expansion-panel-header>
-    <h2>Generate a dad's joke</h2>
+    <p>Dad's jokes</p>
   </mat-expansion-panel-header>
-  <button mat-raised-button>Dad jokes</button>
+  <button (click)="displayJoke()" color="accent" mat-raised-button> Generate a joke</button>
+  <br><br>
+  <mat-card *ngIf="joke">
+    <mat-card-content >
+      <fa name="quote-left"></fa>
+      <span class="quote">{{joke.value}}</span>
+      <fa name="quote-right"></fa>
+    </mat-card-content>
+  </mat-card>
 </mat-expansion-panel>
 

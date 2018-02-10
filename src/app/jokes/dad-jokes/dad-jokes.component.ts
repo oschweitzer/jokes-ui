@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DadJokesService} from './services/dad-jokes.service';
+import {Joke} from '../models/joke.model';
 
 @Component({
   selector: 'app-dad-jokes',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadJokesComponent implements OnInit {
 
-  constructor() { }
+  joke: Joke;
+
+  constructor(private dadJokesService: DadJokesService) {}
 
   ngOnInit() {
+  }
+
+  displayJoke() {
+    try {
+      this.dadJokesService.getJoke().subscribe((data: any) => this.joke = {
+        value: data.data['joke']
+      });
+    } catch (e) {
+      console.error(e);
+    }
+
   }
 
 }
