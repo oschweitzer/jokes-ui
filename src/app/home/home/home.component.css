@@ -1,0 +1,11 @@
+.custom-toolbar {
+  text-shadow: 1px 1px 1px #32393d;
+  font-weight: bold;
+}
+
+.joke-content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 75%;
+}
