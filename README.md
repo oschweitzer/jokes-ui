@@ -1,5 +1,7 @@
 # JokeUi
 
+This project is a Angular UI that displays dads and Chuck Norris jokes. These jokes are provided by [jokes-api](https://github.com/oschweitzer/jokes-api).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
 
 ## Development server
@@ -12,7 +14,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+### Ng
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+### Docker
+
+Run `docker build -t jokes-ui .`, then run `docker run -p 8080:80 jokes-ui` to start the Docker.
+
+> In order to access the jokes-api build the Docker container and then go to , to start the UI and the API.
 
 ## Running unit tests
 
